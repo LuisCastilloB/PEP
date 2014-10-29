@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/jquery.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/jquery_mobile.js"></script>
+        <title>PEP</title>
+        <style>
+   * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+} 
+
+#demo-page * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* Arrow only buttons in the header. */
+#demo-page .ui-header .ui-btn {
+    background: none;
+    border: none;
+    top: 9px;
+}
+#demo-page .ui-header .ui-btn-inner {
+    border: none;
+}
+
+.menu-left{
+position: absolute; 
+background: url(img/fondo_menu.jpg);
+background-repeat: repeat-y;
+z-index:10 !important;
+}
+
+.menu-left-header{
+    position:absolute;
+    width:27em !important;
+}
+
+.btn_menu li a
+{
+    padding-left: 20px;
+    background: rgba(3,55,46,1);
+    margin-top: 15px;
+    font-size: 20px;
+    color: #afcc39 !important;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.50); 
+}
+.btn_menu li a:hover
+{
+    background: rgba(3,55,46,0.80);
+}
+
+.header-menu{
+    margin:10px;
+    background:white;
+    width:24em !important; 
+    border-radius:10px;
+    padding:10px;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.50); 
+}
+
+.btn-left{
+    background: url(img/left.png);
+    background-size: 60px 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+top: 45%;
+left: 0;
+position: fixed;
+z-index: 1;
+bottom: 50%;
+
+vertical-align: middle;
+}
+
+.modulo{
+    display:none;
+}
+
+.novisible{
+    display:none;
+}
+
+.panel{
+    text-align: justify;
+    text-transform: none !important;
+}
+
+.tr-total{
+    background: #E5E5E5;
+}
+.text-center{
+    text-align: center;
+}
+
+.img_info{
+    margin-top: 10px;
+    width: 80px;
+}
+
+.modal-backdrop{
+    opacity: 0.3 !important;
+}
+
+.panel-heading{
+    background: #afcc39 !important;
+    color: #03372c  !important;
+    cursor: pointer;
+}
+
+.panel-body{
+    background: rgba(175,204,57,0.3) !important;
+}
+.panel-body img{
+    margin: auto;
+}
+
+hr{
+    height: 1px;
+    background: #03372c  !important;
+}
+
+.docente{
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px double #03372e;
+}
+
+.desarrolado{
+    background: #03372e !important;
+    color: #afcc39  !important;
+    text-align: center;
+    font-size: 11px;
+}
+
+.verde_claro{
+     background: #afcc39 !important;
+    color: #03372e  !important;
+}
+.verde_oscuro{
+    background: #03372e !important;
+    color: #afcc39  !important;
+}
+
+.pensum{
+    background: rgba(175,204,57,0.3) !important;
+}
+
+
+        </style>
+    </head>
+  		<body>
+  
+  
+   <div data-role="page" id="demo-page" data-theme="d" data-url="demo-page" >
+        <div data-role="header" class="ui-header ui-bar-a" role="contentinfo">
+                         <marquee>
+                        <span class="ui-title" role="heading" aria-level="1">
+                            PROYECTO EDUCATIVO DE PROGRAMA - INGENIERÍA DE SISTEMAS
+                         </span></marquee>
+        </div>
+        <a href="#left-panel" class="btn-left"></a>
+
+        <div data-role="content">
+                
+          <section id="inicio" class="modulo" style="display:block;">
+                <div class="container">
+                    <center>
+                        <img src="img/pep_banner.png" class="img-responsive">
+                    </center>
+                        <br>
+                        <div class="panel">
+                                <div class="panel-body">
+                                    <h4>Ingeniería de Sistemas</h4>
+                                    <b>Código SNIES: 7570 Registro Calificado</b>
+                                    <br><b>Resolución No. 10885 del 10 de diciembre de 2010</b>
+                                    <br>
+                                    <hr>
+                                    <div class="panel" >
+                                        <div class="panel-heading" id="h_pep">
+                                            <center><b>¿Qué es el PEP?</b></center>
+                                        </div>
+                                        <div class="panel-body" id="b_pep">
+                                            El Proyecto Educativo del Programa de Ingeniería de Sistemas es el documento que expone la identidad de nuestro programa y declara su misión, visión y propósitos de formación, a partir de los cuales se ha construido su modelo curricular y pedagógico. Todo esto como respuesta a las necesidades del presente y con una amplia perspectiva hacia futuro.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="panel">
+                                        <div class="panel-heading" id="h_sis">
+                                            <center><b>Sobre el Programa</b></center>
+                                        </div>
+                                        <div class="panel-body" id="b_sis" style="display:none">
+                                           <img src="img/sistemas.jpg" class="img-responsive" style="margin:auto;">
+                                           <br>
+                                           <p>
+                                                El programa de Ingeniería de Sistemas de Los Libertadores, forma profesionales integrales, sobresalientes en el campo humano, académico, técnico e investigativo, y capaces de asumir los retos y cambios tecnológicos permanentes.
+                                                Dar herramientas gerenciales e investigativas que permitan trabajar y dimensionar el futuro para darle rumbo al presente. 
+                                                <br><br>
+                                                Generar espíritu, capacidad y creatividad empresarial como medio para que el estudiante genere su propio empleo y contribuya a generarlo a los demás.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+
+
+                                </div>
+                        </div>
+                </div>
+          </section>
+
+          <section id="mision_vision"  class="modulo">
+                <div class="container">
+                    <center>
+                        <img src="img/mision_vision.png" class="img-responsive">
+                    </center>
+                    <br>
+                     <div class="panel panel-success">
+                        <div class="panel-heading" id="h_mision">
+                               <b>MISIÓN</b>
+                        </div>
+                        <div class="panel-body" id="b_mision">
+                            
+                              <p>Formar Ingenieros de Sistemas integrales con sólida fundamentación ética, científica y humanística, emprendedores, con compromiso social, a través de la aplicación de un currículo actualizado permanentemente acorde con el estado del arte de la Ingeniería de Sistemas, con capacidad de ofrecer soluciones a problemas de la industria, aportar al desarrollo del país y al mejoramiento de la calidad de vida, proactivos a los cambios tecnológicos en los campos de Ingeniería de Software y Teleinformática.
+                              </p>
+                            
+
+                        </div>
+                    </div>
+
+
+                     <div class="panel panel-success">
+                        <div class="panel-heading"  id="h_vision">
+                                <b>VISIÓN</b>
+                        </div>
+                        <div class="panel-body" id="b_vision" style="display:none">
+                            
+                                <p>Al final de las primeras dos décadas del siglo XXI el Programa de Ingeniería de Sistemas de Los Libertadores, se posicionará como líder en la formación de alta calidad de ingenieros de la especialidad, y será reconocido por la generación y transformación del conocimiento en los campos de Ingeniería de Software y Teleinformática.
+                                </p>
+                            
+                        </div>
+                    </div>
+                </div>
+          </section>
+            
+          <section id="objetivos" class="modulo">
+                <div class="container">
+                    <center>
+                        <img src="img/objetivos.png" class="img-responsive">
+                    </center>
+                    <br>
+                    <div class="panel panel-success">
+                        <div class="panel-heading" id="o_generales">
+                               <b>OBJETIVOS GENERALES</b>
+                        </div>
+                        <div class="panel-body" id="b_generales">
+                            
+                            
+                            <ul>
+                                <li>
+                                    Orientar la actualización permanente del currículo.<br><br>
+                                </li>
+                                <li>
+                                    Asegurar la calidad académica en concordancia con las políticas institucionales de aseguramiento de la calidad.<br><br>
+                                </li>
+                                <li>
+                                    Establecer lineamientos que facíliten la gestión coordinada del equipo de administración académica en pro de la satisfacción de las necesidades y proyecciones de la academia de acuerdo con las orientaciones institucionales.<br><br>
+                                </li>
+                                <li>
+                                    Propiciar y favorecer la formación integral, la generación de valores orientados ak crecimiento personal colectivo, la práctica cotidiana de la responsabilidad, la solidaridad, la tolerancia, la ética, la particiapción y la autonomía, el arte, la cultura, y el desarrollo intelectual, espiritual y físico.<br><br>
+                                </li>
+                                <li>
+                                    Contribuir con el desarrollo local, regional y nacional a través de la participación activa de la comunidad académica en el análisis de las demandas sociales y la formulación de respuestas viables y efectivas.<br><br>
+                                </li>
+                                <li>
+                                    Formar, en concordancia con el Proyecto Institucional libertador, ingenieros de sistemas competentes que apliquen los conocimeintos científicos y procedímentales de la ingeniería de sistemas, en la identificación y solución de problemas de contexto mediante la aplicación de las técnicas, y métodos propios de la ingeniería, a través de la planeación, diseño, evaliacuión, desarrollo, integración y gestión de procesos y sistemas cuidando e impacto social, económico, tecnológico y ambiental. <br><br>
+                                </li>
+                            </ul>
+                            
+
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading"  id="o_especificos">
+                                <b>OBJETIVOS ESPECÍFICOS</b>
+                        </div>
+                        <div class="panel-body novisible" id="b_especificos">
+                            <ul>
+                                <li>
+                                    Profundizar en las áreas de Ingeniería de Software y Teleinformática a través de las lineas de énfasis.<br><br>
+                                </li>
+                                <li>
+                                    Articular la teoría con la práctica mediante la utilización intensiva de laboratorios especializados en todos los espacios académicos del área profesional.<br><br>
+                                </li>
+                                <li>
+                                    Utilizar y apropiar críticamente las tecnologías de información y la comunicación (TIC), como herramientas para el aprendizaje.<br><br>
+                                </li>
+                                <li>
+                                    Desarrollar en el futuro ingeniero de sistemas, mediante la aplicación de un currículo con enfoque por competencias, permanentemente actualizado al estado del arte de al ciencía y la tecnología, a través de procesos de formación integral mediados por el uso de las tecnologías.<br><br>
+                                    <ul>
+                                        <li>
+                                            Capacidad para identificar necesidades en el área de ingeniería de sistemas que se presenten en cualquiera de los sectores socio-económicos del entorno con el fin de proponer, implementar, evaluar y ajustar soluciones apropiadas.<br><br>
+                                        </li>
+                                        <li>
+                                            Habilidad de diseñar e implementar, evaluar, ejecutar y gestionar proyectos en el área de ingeniería de sistemas, en donde se apliquen los conocimientos adquiridos en la áreas disciplinares de la profesión.<br><br>
+                                        </li>
+                                        <li>
+                                            Capacidad de adecuar las tecnológías existentes a las necesidades particulares del entorno, realizando los desarrollos necesarios y optimizando los recursos disponibles.<br><br>
+                                        </li>
+                                        <li>
+                                            El espíritu emprendedor, esto es, la capacidad de asumir liderazgo, aceptar riesgos, proponer cambios y ser creativo e innovador en la resolución y formulación de problemas, posibilitando soculiones que satisfagan las necesidades de las organizaciones, de la comunidad y las propias, para el logro de una mejor calidad de vida.<br><br>
+                                        </li>
+                                        <li>
+                                            Capacidad de recurrir al conocimiento científico mediante el pensamiento creativo, el lógico y el racional, que permitan el desarrollo de la destreza la disposición, la comprensión para la interpretación y el análisis del mundo natural y social, de manera tal que se puedan proponer soluciones sustentadas en ese conocimiento.<br><br>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Con capacidad de tomar desiciones con responsabilidad y ética en las situaciones que se presenten en su ejercicio profesional.<br><br>
+                                </li>
+                                <li>
+                                    Con capacidad de reconocer la condición ciudadana de los de más actores sociales con actitud de tolerancia, respeto por el otro y por las normas.<br><br>
+                                </li>
+                                <li>
+                                    Con capacidad de recurrir al conocimiento científico para proponer soluciones sustentadas en ese conocimiento a través del pensamiento creativo, lógico y racional.<br><br>
+                                </li>
+                                <li>
+                                    Con capacidad de comprender y producir literatura técnica de la Ingeniería de Sistemas en la lengua materna e inglés.<br><br>
+                                </li>
+                                <li>
+                                    Con manera de argumentar de forma razonable e infromada con base en cuerpo de conocimientos que fundamentan la Ingeniería de Sistemas sobre la solución adoptada para resolver un problema.<br><br>
+                                </li>
+                                <li>
+                                    Con iniciativa para el desarrollo con responsabilidad de acciones creativas en el desempeño de la Ingeniéría de Sistemas.<br><br>
+                                </li>
+                                <li>
+                                    Con actitud emprendedora para la creación de empresa.<br><br>
+                                </li>
+                                <li>
+                                    Con capacidad para comunicarse adecuadamente en la lengua materna y en inglés.<br><br>
+                                </li>
+                                <li>
+                                    Con capacidad y motivación para actualizar  permanentemente sus conocimientos científicos y tecnológicos.<br><br>
+                                </li>
+                                <li>
+                                    Con capacidad para realizar trabajos inter y trans disciplinario, en forma individual y como integrante de un equipo.<br><br>
+                                </li>
+                                <li>
+                                    Con capacidad de usar las tecnologías de la información y la comunicación para acceder al conocimiento actualizado necesario para dar solución a problemas en el ámbito de la profesión.<br><br>
+                                </li>
+                                  
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+          </section>
+           
+          <section id="perfiles" class="modulo">
+                <div class="container">
+                    <center>
+                        <img src="img/perfiles.png" class="img-responsive">
+                    </center>
+                    <br>
+                    <div class="panel panel-success">
+                        <div class="panel-heading" id="p_programa">
+                               <b> PERFIL DEL PROGRAMA</b>
+                        </div>
+                        <div class="panel-body" id="b_programa">
+                            Además de las actitudes y habilidades requeridas para ingresar como estudiante a los Libertadores
+                            , el aspirante a estudiar Ingeniería de Sistemas debe acreditar:
+                            <br><br>
+                            <b>APTITUDES</b>
+                            <br>
+                            <ul>
+                                <li>Para las ciencias exactas y naturales.</li>
+                                <li>Razonamiento lógico.</li>
+                                <li>Eazonamiento abstracto.</li>
+                            </ul>
+                            <br>
+                            <b>CONOCIMIENTOS:</b>
+                            <br>
+                            <ul>
+                             <li>Fundamentales en el área de Física.</li>
+                             <li>Fundamentales en el área de Matemáticas.</li>
+                             <li>Español e Inglés básico.</li>
+                            </ul>
+                            <br>
+                            <b>HABILIDADES:</b>
+                            <br>
+                            <ul>
+                            <li>Realizar procesos básicos de computación.</li>
+                            <li>Realizar actividades que requieran habilidad manual.</li>
+                            <li>Realizar actividades que impliquen expresión gráfica.</li>
+                              </ul>  
+
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading"  id="p_profesional">
+                                <b>PERFIL DEL PROFESIONAL</b>
+                        </div>
+                        <div class="panel-body novisible" id="b_profesional">
+                            El programa pretende formar un profesional en Ingeniería de Sistemas:
+                            <br><br>
+                            <ul>
+                                <li>
+                                    Con capacidad de concebir, especificar, diseñar, desarrollar, validar, montar,
+                                    mantener, integrar y administrar sistemas de Software y Telemática.
+                                    <br>
+                                    <br>
+                                </li>
+                                <li>
+                                    Posee capacidad para planear y desarrollar la transferencia, asimilación y uso de de la tecnología de información organizacional a un nivel local, nacional e internacional.
+                                </li>
+                                <li>
+                                    Es innovador con mentalidad de creación de empresa.
+                               </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading" id="p_ocupacional">
+                               <b> PERFIL OCUPACIONAL</b>
+                        </div>
+                        <div class="panel-body novisible" id="b_ocupacional">
+                            El Ingeniero de Sistemas de los Libertadores se puede desempeñar como:
+                            <br><br>
+                            <ul>
+                                <li>
+                                    Gerente de Tecnología, responsable por la provisión de los servicios informáticos o tele-informáticos que sirven de base a la labor de una organización, tiene las competencias no solamente mantener en funcionamiento la infraestructura requerida, sino también de coordinar un adecuado mantenimiento, innovación y renovación de equipos de sistemas computacionales de la base.<br><br>
+                                </li>
+                                <li>
+                                    Consultor Informático, experto capaz de asesorar a otras personas u organizaciones en la identificación de oportunidades informáticas para la solución de problemas de su campo de especialidad, en la identificación, formulación y valoración de alternativas, en la orientación y entrenamiento personal, así como en la puesta en marcha y seguimiento de las líneas de acción aplicables en la Ingeniería de Sistemas.<br><br>
+                                </li>
+                                 <li>
+                                    Emprendedor, porque tiene iniciativa propia, es visionario de oportunidades y con capacidad para
+                                    crear empresas de sistemas y tecnología.<br><br>
+                                </li>
+                                <li>
+                                    Jefe de Proyectos de Sistemas, lider capaz de analizar, planear, organizar, implementar, dirigir
+                                    y controlar actividades realizadas por un grupo de investigación y desarrollo de sistemas, orientado
+                                    a crear, diseñar, elaborar, mejorar, o analizarun problema o sistema de información de una organización.<br><br>
+                                </li>
+                                <li>
+                                    Director de Sistemas, encargado de todos los servicios informáticos de una compañía, así como de la infraestructura tecnológica, técnica, y talento humano que los haces posibles. Es un Adminsitrador de servicios informáticos, capaz de articularlos con los de-más recursos de la organzación.<br><br>
+                                </li>
+                                <li>
+                                    Ingeniero rsponsable de aplicar normas de seguridad y desempeño de sistemas y desarrollar procedimientos para su operación y mantenimiento.<br><br>
+                                </li>
+                                <li>
+                                    Analista, Programador, Jefe de Desarrollo, Jefe de sistemas, Constructor de Sistemas Informáticos: capaz de analizar, diseñar, desarrollar, integrar, innovar, operar y controlar sistemas informáticos relacionados con la Ingeniería de Software y Teleinformática.<br><br>
+                                </li>
+                                <li>
+                                    Interventor y auditor de proyectos informáticos.<br><br>
+                                </li>
+                                <li>
+                                    Soporte a usuarios, con la habilidad para capacitar,  entrenar, dar soporte, analizar y resolver problemas operativos y técnicosa los usuarios de los sistemas de información de una organización, utilizando las herramientas tecnológicas adecuadas.<br><br>
+                                </li>
+                                <li>
+                                    Docencía e Investigación aplicada, líder en la explotación y generación de nuevas técnicas, métodos, metodologías y teorías aplicadas en la Ingeniería de Sistemas.<br><br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading"  id="p_egresado">
+                                <b>PERFIL DEL EGRESADO</b>
+                        </div>
+                        <div class="panel-body novisible" id="b_egresado">
+                            El Ingeniero de Sistemas de los Libertadores es un profesional con sólida fundamentación ética, científica y humanistíca, emprendedor, con compromiso social, acredia conocimientos científicos, tecnológicos y técnicos en el campo científico de los sistemas, que le permiten contribuir al progreso del país, al bienestar de la comunidad y a su propia realización profesional.
+                            <br><br>
+                            Es capaz de resolver problemas de ingeniería a través del ánalisis, la planeación, diseño, evaluación, desarrollo , integración y gestión de sistemas de información y soluciones telemáticas cuidando el impacto social, económico y tecnológico, puede realizar las siguientes funciones:
+                            <br><br>
+                            <ul>
+                                <li>Desarrollar software de calidad</li>
+                                <li>Desarrollar soluciones telemáticas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+          </section>
+            
+          <section id="pensum" class="modulo">
+                <div class="container">
+                    <center>
+                        <img src="img/pensum.png" class="img-responsive">
+                    </center>
+                    <br>
+                <table class="table table-bordered pensum">
+                    <thead>
+                        <tr class="verde_claro">
+                            <th colspan="2"><b><center>PLAN DE ESTUDIOS</center><b></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td colspan="2">
+                            <table class="table table-bordered ">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>PRIMER SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Cálculo Diferencial</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Introducción a la ingeniería de Sistemas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Programación Estructurada</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Teoría General de Sistemas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Catedra Libertadora</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Ingles I</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>SEGUNDO SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Cálculo Integral </td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Física Mecánica</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Algebra Lineal</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Estructuras Básicas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Lengua y Comunicación</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Ingles II</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>TERCER SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Cálculo en Varias Variables</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Fundamentos de Fluidos y termodinámica</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Matemáticas Discretas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Estructuras Avanzadas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Arquitectura de computadores</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Ingles III</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>CUARTO SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Ecuaciones Diferenciales</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Física Oscilaciones y Ondas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Programación Avanzada I</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Sistemas Operativos</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Sistemas de Información</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Ingles IV</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered ">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>QUINTO SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Métodos Numéricos</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Electricidad y Electromagnetismo</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Programación avanzada II</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Fundamentos de Ingeniería de Software</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Introducción a proyectos de Investigación</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Emprendimiento</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>SEXTO SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Lenguajes Formales y autómatas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Programación avanzada III</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                     <tr>
+                                        <td>Programación Lineal</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Modelaje de Sistemas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Probabilidad y estadistica</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Electiva Institucional</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                              <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>SEPTIMO SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Fundamentos de Redes</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Bases Datos</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                     <tr>
+                                        <td>Programación Web</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Investigación de Operaciones</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Fundamentos de Ingeniería Económica</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Dilemas Eticos, políticos y Responsabilidad Social</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>OCTAVO SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Inteligencia Artificial</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Electiva profesional I</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                     <tr>
+                                        <td>Electiva profesional II</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Sistemas Distribuidos</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Formulación y Evaluación de Proyectos</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Administración de Bases de Datos</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr class="verde_oscuro">
+                                        <td colspan ="2"><center><b>NOVENO SEMESTRE<b></center></td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><b><center>CONTENIDO</center></b></td>
+                                        <td><b><center>CRÉDITOS</center></b></td>                            
+                                    </tr>
+                                   <tr>
+                                        <td>Auditoria de Sistemas</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Electiva profesional III</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                     <tr>
+                                        <td>Electiva profesional IV</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Sistemas Expertos</td>
+                                        <td class="text-center">3</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Administracion de Proyectos de Software</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr>
+                                        <td>Práctica Empresarial</td>
+                                        <td class="text-center">2</td>                            
+                                    </tr>
+                                    <tr class="tr-total">
+                                        <td><b>TOTAL CRÉDITOS</b></td>
+                                        <td class="text-center"><b>16</b></td>                            
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="verde_claro">
+                        <td><b><b>TOTAL ESPACIOS ACADÉMICOS</b></td>
+                        <td class="text-center"><b>54</b></td>
+                    </tr>
+                    <tr class="verde_claro">
+                        <td><b>TOTAL CRÉDITOS DEL PROGRAMA</b></td>
+                        <td class="text-center"><b>144</b></td>
+                    </tr>
+                </table>
+
+
+                        </td>
+                    </tr>
+                </table>
+                    
+                </div>
+          </section>
+
+            
+          <section id="docentes" class="modulo">
+                <div class="container">
+                    <center>
+                        <img src="img/docentes.png" class="img-responsive">
+                    </center>
+                    <br>
+                    
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <center><b>ING. AUGUSTO ÁNGEL</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro1.jpg" class="img-responsive docente">
+                                </div>  
+                                <div class="panel-heading">
+                                    <center><b>ING. JAVIER DAZA</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro.jpg" class="img-responsive docente">
+                                </div> 
+                                 <div class="panel-heading">
+                                    <center><b>ING. LUIS EDUARDO BAQUERO</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro2.jpg" class="img-responsive docente">
+                                </div> 
+                                <div class="panel-heading">
+                                    <center><b>ING. CELIO GIL</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro4.jpg" class="img-responsive docente">
+                                </div>  
+                                <div class="panel-heading">
+                                    <center><b>ING. BERTHA MARCELA JAIMES</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro8.jpg" class="img-responsive docente">
+                                </div>
+                                <div class="panel-heading">
+                                    <center><b>ING. GERARDO PARDO</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro3.jpg" class="img-responsive docente">
+                                </div> 
+                                <div class="panel-heading">
+                                    <center><b>ING. ALEXIS PLAZA</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro6.jpg" class="img-responsive docente">
+                                </div> 
+                                <div class="panel-heading">
+                                    <center><b>ING. FREDYS SIMANCA</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro5.jpg" class="img-responsive docente">
+                                </div> 
+                                <div class="panel-heading">
+                                    <center><b>ING. LUCY MEDINA</b></center>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/pro7.jpg" class="img-responsive docente">
+                                </div> 
+
+
+                            </div>
+                </div>
+          </section>
+            
+          <section id="informacion" class="modulo">
+                <div class="container">
+                    <center>
+                        <img src="img/informacion.png" class="img-responsive">
+                    </center>
+                    <br>
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <center>
+                                <h4>"Toma el camino de los mejores,<br>toma el camino de Los Libertadores"</h4>
+                            </center>
+                            <hr>
+                            <center>
+                                Somos una institución de Educación Superior a inspección y vigilancia por el Ministerio de Educación Nacional.
+                            </center>
+                            <hr>
+                            <div class="text-center">
+                                <h4>
+                                info@libertadores.edu.co<br>
+                                PBX: 254 47 50<br>
+                                <a href="" data-toggle="modal" data-target="#myModal">Carrera 16 No. 63 A - 68</a><br>
+                                Bogotá D.C. Colombia<br>
+                                <a href="http://www.libertadores.edu.co" target="_blank">www.libertadores.edu.co</a><br>
+                                <br>
+                                <br>
+                                dirsistemas@libertadores.edu.co
+                                </h4>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/iso.png" class="img-responsive">
+                                </div>
+                                <div class="col-xs-4">
+                                </div>
+                                <div class="col-xs-4">
+                                    <table>
+                                        <tr>
+                                            <td colspan="2" class="text-center">Siguenos en:</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://www.facebook.com/ULosLibertadores" target="_blank">
+                                                    <img src="img/fb.png" class="img-responsive img_info">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="https://www.twitter.com/UniLibertadores" target="_blank">
+                                                    <img src="img/tw.png" class="img-responsive img_info">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                         </div>
+                         <div data-role="footer" class="ui-footer ui-bar-a desarrolado" role="contentinfo">
+                         <span class="ui-text " role="footer" aria-level="1">
+                            Aplicación Desarrollada por<br>Luis Castillo y Alfonso Vanegas
+                        </span>
+                    </div>
+                    </div>
+                </div>
+          </section>
+        </div> 
+
+        <div data-role="panel" id="left-panel" class="menu-left">
+            <div id="menu-left-header">
+                <div class="header-menu">
+                    <center>
+                    <img src="img/ful2.png">
+                    <br>
+                        PROYECTO EDUCATIVO DE PROGRAMA
+                    <br>
+                        INGENIERÍA DE SISTEMAS
+                    <br>
+                </center>
+                </div>
+                <hr>
+                <ul class="nav nav-pills nav-stacked btn_menu" style="width:24em !important;">
+                        <li>
+                        <a href="javascript:modulos('inicio');">
+                            INICIO
+                        </a>
+                     </li>
+                      <li>
+                        <a href="javascript:modulos('mision_vision');">
+                          MISIÓN Y VISIÓN
+                        </a>
+                     </li>
+                     <li>
+                        <a href="javascript:modulos('objetivos');">
+                          OBJETIVOS
+                        </a>
+                     </li>
+                     <li>       
+                        <a href="javascript:modulos('perfiles');">
+                          PERFILES
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:modulos('pensum');">
+                          PLAN DE ESTUDIOS
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:modulos('docentes');">
+                          DOCENTES
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:modulos('informacion');">
+                          MÁS INFORMACIÓN
+                        </a>
+                      </li>
+                </ul>   
+            </div>
+        </div>
+    </div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <center>
+            <img src="img/map.png" class="img-responsive">
+        </center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  
+  
+
+<script>
+    $( document ).on( "pageinit", "#demo-page", function() {
+    $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+       
+        if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+        }
+    });
+});
+
+
+function modulos(modulo){
+   var modulos = ['inicio','mision_vision','objetivos','perfiles','docentes','pensum','informacion'];
+   for(var i=0; i<modulos.length;i++){
+        document.getElementById(modulos[i]).style.display='none';
+   }
+   $( "#left-panel" ).panel( "close" );
+   $('#'+modulo).fadeIn(1000);
+}
+
+
+var estado_perfil= 'b_programa';
+
+$("#p_programa").click(function(){
+    dinamisidad_perfiles('b_programa');
+});
+
+$("#p_profesional").click(function(){
+    dinamisidad_perfiles('b_profesional');
+});
+
+$("#p_egresado").click(function(){
+    dinamisidad_perfiles('b_egresado');
+});
+
+$("#p_ocupacional").click(function(){
+    dinamisidad_perfiles('b_ocupacional');
+});
+
+
+var estado_objetivos = 'b_generales';
+
+$("#o_generales").click(function(){
+    dinamisidad_objetivos('b_generales');
+});
+
+$("#o_especificos").click(function(){
+    dinamisidad_objetivos('b_especificos');;
+});
+
+var estado_mv = 'b_mision';
+
+$("#h_mision").click(function(){
+    dinamisidad_mv('b_mision');
+});
+
+$("#h_vision").click(function(){
+    dinamisidad_mv('b_vision');;
+});
+
+var estado_pep = 'b_pep';
+
+$("#h_pep").click(function(){
+    dinamisidad_pep('b_pep');
+});
+
+$("#h_sis").click(function(){
+    dinamisidad_pep('b_sis');;
+});
+
+
+function dinamisidad_perfiles(perfil){
+    var estado =  (estado_perfil==perfil)?true:false;
+    var visible = ($('#'+perfil).is (':visible'))?true:false;
+
+    if(estado==true && visible==true){
+        $("#"+estado_perfil).slideUp("fast");
+    }else if(estado==true && visible==false){
+        $("#"+estado_perfil).slideDown("fast");
+    }else{
+       $("#"+perfil).slideDown("fast");
+       $("#"+estado_perfil).slideUp("fast");
+        estado_perfil = perfil;
+    }
+}
+
+function dinamisidad_objetivos(objetivo){
+    var estado =  (estado_objetivos==objetivo)?true:false;
+    var visible = ($('#'+objetivo).is (':visible'))?true:false;
+
+    if(estado==true && visible==true){
+        $("#"+estado_objetivos).slideUp("fast");
+    }else if(estado==true && visible==false){
+        $("#"+estado_objetivos).slideDown("fast");
+    }else{
+       $("#"+objetivo).slideDown("fast");
+       $("#"+estado_objetivos).slideUp("fast");
+        estado_objetivos = objetivo;
+    }
+}
+
+function dinamisidad_mv(mv){
+    var estado =  (estado_mv==mv)?true:false;
+    var visible = ($('#'+mv).is (':visible'))?true:false;
+
+    if(estado==true && visible==true){
+        $("#"+estado_mv).slideUp("fast");
+    }else if(estado==true && visible==false){
+        $("#"+estado_mv).slideDown("fast");
+    }else{
+       $("#"+mv).slideDown("fast");
+       $("#"+estado_mv).slideUp("fast");
+        estado_mv = mv;
+    }
+}
+
+function dinamisidad_pep(obj){
+    var estado =  (estado_pep==obj)?true:false;
+    var visible = ($('#'+obj).is (':visible'))?true:false;
+
+    if(estado==true && visible==true){
+        $("#"+estado_pep).slideUp("fast");
+    }else if(estado==true && visible==false){
+        $("#"+estado_pep).slideDown("fast");
+    }else{
+       $("#"+obj).slideDown("fast");
+       $("#"+estado_pep).slideUp("fast");
+        estado_pep = obj;
+    }
+}
+
+        
+
+        </script>
+    </body>
+</html>
